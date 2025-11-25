@@ -3,7 +3,7 @@
 int main(void)
 {
 
-    int c, nl = 0, tab = 0, blanks = 0;
+    int c, nl = 0, tab = 0, blanks = 0; // actualy not readable
 
     while ((c = getchar()) != EOF) {
         if (c == ' ')
@@ -13,7 +13,7 @@ int main(void)
         else if (c == '\n')
             ++nl;
     }
-    printf("%d %d %d\n", nl, tab, blanks);
+    printf("%d %d %d\n", nl, tab, blanks); // call Ctrl+d to call EOF
 
     return 0;
 }
