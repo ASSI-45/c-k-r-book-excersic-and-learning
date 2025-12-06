@@ -16,19 +16,18 @@ int main(void)
     while((c = getchar()) != EOF) { // scans untill EOF is called by C-d
         if(isspace(c)) { // checks if c is a space
             if (word_in_or_out == IN) { // if word is in then the scope exucutes
-                printf("stuff\n");
                 word_in_or_out = OUT;
+                words = words + 1;
             } else {
               word_in_or_out = OUT;
             }
         } else {
             len = len + 1;
             word_in_or_out = IN;
-            words = words + 1;
         }
 
     }
 
-    printf("%d", len);
+    printf("number of letters: %d\nnumber of words: %d", len, words);
     return EXIT_SUCCESS;
 }
